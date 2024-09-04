@@ -80,6 +80,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'email_integration.wsgi.application'
+ASGI_APPLICATION = 'email_integration.asgi.application'
 
 CHANNEL_LAYERS = {
     'default': {

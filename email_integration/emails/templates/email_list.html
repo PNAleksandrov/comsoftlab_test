@@ -1,7 +1,7 @@
 {% load static %}
 {% if account_id %}
 <div id="email-list">
-    <h2>Не прочитанные сообщения</h2>
+    <h2>E-mails</h2>
     <div id="status"></div>
     <div id="progress-bar" style="display: none;">
         <div class="progress">
@@ -23,7 +23,7 @@
             {% if email_messages %}
                 {% for message in email_messages %}
                     <tr>
-                        <td>{{ message.account }}</td>
+                        <td>{{ message.id }}</td>
                         <td>{{ message.subject }}</td>
                         <td>{{ message.sent_date }}</td>
                         <td>{{ message.received_date }}</td>
@@ -48,3 +48,4 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="{% static 'js/email.js' %}"></script>
+
